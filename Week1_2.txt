@@ -1,0 +1,234 @@
+<﻿Unix commands>
+
+
+whoami – show your username
+id – print user identity
+groups – show which groups user belongs to
+passwd – change user password
+who – find out who is logged into the system
+last – show history of logins into the system
+
+
+
+<Unix file operations>
+Navigating filesystem and managing files and access permissions:
+
+ls – list files and directories
+cp – copy files (work in progress)
+rm – remove files and directories (work in progress)
+mv – rename or move files and directories to another location
+chmod – change file/directory access permissions
+chown – change file/directory ownership
+  
+  
+  <Grep command in Unix:>
+  
+The grep command in Unix/Linux is a powerful tool used for searching and manipulating text patterns within files. Its name is derived from the ed (editor) command g/re/p (globally search for a regular expression and print matching lines), which reflects its core functionality. grep is widely used by programmers, system administrators, and users alike for its efficiency and versatility in handling text data. In this article, we will explore the various aspects of the grep command.
+
+-c: This prints only a count of the lines that match a pattern
+-h: Display the matched lines, but do not display the filenames.
+–i: Ignores, case for matching
+-l: Displays list of a filenames only.
+-n: Display the matched lines and their line numbers.
+-v: This prints out all the lines that do not matches the pattern
+-e : Specifies expression with this option. Can use multiple times.
+-f file: Takes patterns from file, one per line.
+-o :Print only the matched parts of a matching line, with each such part on a separate output line.
+
+Example:
+grep -o "unix" geekfile.txt
+
+
+<Unix directory management commands>
+Navigating filesystems and managing directories:
+
+• cd – change directory
+• pwd – confirm current directory
+• ln – make links and symlinks to files and directories
+• mkdir – make new directory
+• rmdir – remove directories in Unix
+
+
+Command:ps - displays a snapshot of all current processes
+Common Syntax:
+Example
+$ ps [options]
+$ ps -ef
+Show every process running, formatted as a table
+
+Command:top - displays a live status of current processes
+Common Syntax:
+Example
+$ top [options]
+$ top
+Show a live view of all current processes
+
+Command:bg - resume a background suspended a job
+Common Syntax:
+Example
+$ bg [job_spec …]
+$ xterm
+Ctrl-Z
+$ bg
+Continue running a job that was previously suspended (using Ctrl-Z) in the background
+
+Command:fg - bring a background job to the foreground
+Common Syntax:
+Example
+Ctrl-Z
+$ bg
+$ fg
+$ xterm
+$ fg [job_spec]Bring a previous background job to the foreground
+
+Command:clear – clear a terminal screen
+Common Syntax:
+Example
+$ clear
+$ clear
+Clear all prior text from the terminal screen
+
+Command:history – print history of commands in the current session
+Common Syntax:
+Example
+$ history [options]
+$ history
+
+
+
+#1) touch: Create a new file or update its timestamp.
+• Syntax: touch [OPTION]…[FILE]
+• Example: Create empty files called ‘file1’ and ‘file2’
+• $ touch file1 file2
+
+#2) cat: Concatenate files and print to stdout.
+• Syntax: cat [OPTION]…[FILE]
+• Example: Create file1 with entered cotent
+• $ cat > file1
+• Hello
+• ^D
+
+#3) cp: Copy files
+• Syntax: cp [OPTION]source destination
+• Example: Copies the contents from file1 to file2 and the contents of file1 are retained
+• $ cp file1 file2
+
+#4) mv: Move files or rename files
+• Syntax: mv [OPTION]source destination
+• Example: Create empty files called ‘file1’ and ‘file2’
+• $ mv file1 file2
+
+#5) rm: Remove files and directories
+• Syntax: rm [OPTION]…[FILE]
+• Example: Delete file1
+• $ rm file1
+
+#6) mkdir: Make a directory• Syntax: mkdir [OPTION] directory
+• Example: Create a directory called dir1
+• $ mkdir dir1
+
+#7) rmdir: Remove a directory
+• Syntax: rmdir [OPTION] directory
+• Example: Create empty files called ‘file1’ and ‘file2’
+• $ rmdir dir1
+
+#8) cd: Change directory
+• Syntax: cd [OPTION] directory
+• Example: Change working directory to dir1
+• $ cd dir1
+
+#9) pwd: Print the present working directory
+• Syntax: pwd [OPTION]
+• Example: Print ‘dir1’ if
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Week 2:
+
+<Grep command in Unix:>
+  
+The grep command in Unix/Linux is a powerful tool used for searching and manipulating text patterns within files. Its name is derived from the ed (editor) command g/re/p (globally search for a regular expression and print matching lines), which reflects its core functionality. grep is widely used by programmers, system administrators, and users alike for its efficiency and versatility in handling text data. In this article, we will explore the various aspects of the grep command.
+
+
+-c: This prints only a count of the lines that match a pattern
+-h: Display the matched lines, but do not display the filenames.
+–i: Ignores, case for matching
+-l: Displays list of a filenames only.
+-n: Display the matched lines and their line numbers.
+-v: This prints out all the lines that do not matches the pattern
+-e : Specifies expression with this option. Can use multiple times.
+-f file: Takes patterns from file, one per line.
+-o :Print only the matched parts of a matching line, with each such part on a separate output line
+
+<Sed Command in Unix:>
+
+
+SED is a powerful text stream editor. Can do insertion, deletion,
+search and replace(substitution).
+SED command in unix supports regular expression which allows it
+perform complex pattern matching.
+
+Example:
+Consider the below text file as an input.
+$cat > geekfile.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a
+powerful.
+
+
+Replacing or substituting string : Sed command is mostly used to
+replace the text in a file. The below simple sed command replaces the
+word “unix” with “linux” in the file.
+
+
+Sort Command:
+In Unix-based operating systems, the sort command is used to sort
+the lines of a text file or input stream. It's a versatile command with
+various options to customize the sorting behavior.
+
+chmod Command:
+In Unix operating systems, the chmod command is used to change
+the access mode of a file. The name is an abbreviation of change
+mode. Which states that every file and directory has a set of
+permissions that control the permissions like who can read, write or
+execute the file.
+
+AWK command in Unix:
+awk is a powerful text processing tool available in Unix and Unix-
+like operating systems. It is particularly useful for processing
+structured text files, such as CSV files or log files. awk operates on a
+line-by-line basis, processing each line of input according to the
+specified commands.
+
+shutdown command:
+The shutdown command in Linux is used to shutdown the system in
+a safe way. You can shutdown the machine immediately, or schedule
+a shutdown using 24 hour format.It brings the system down in a
+secure way. When the shutdown is initiated, all logged-in users and
+processes are notified that the system is going down, and no further
+logins are allowed.
+
+SSH :
+SSH, or Secure Shell, constitutes a cryptographic network protocol
+designed to enable secure communication between two systems over
+networks that may not be secure. This protocol is widely employed
+for remote access to servers and the secure transmission of files
+between computers. In essence, SSH acts as a secure conduit,
+establishing a confidential channel for communication in scenarios
+where the network may pose security risks. This technology is
+instrumental for professionals seeking a reliable and secure method
+of managing servers and transferring sensitive data across
+computers in a controlled and protected manner.
+
+FTP:
+File transfer protocol (FTP) is an Internet tool provided by TCP/IP.
+The first feature of FTP is developed by Abhay Bhushan in 1971. It
+helps to transfer files from one computer to another by providing
+access to directories or folders on remote computers and allows
+software, data, text file to be transferred between different kinds of
+computers. The end-user in the connection is known as localhost and
+the server which provides data is known as the remote host.
